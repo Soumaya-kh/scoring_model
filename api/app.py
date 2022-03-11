@@ -2,7 +2,7 @@
 import pickle
 import pandas as pd
 from flask import Flask, request, render_template
-import json
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
 # chargement du modele
@@ -11,11 +11,6 @@ classifier = pickle.load(pickle_inp)
 
 # importer les donnees test
 x_test = pd.read_csv("data_test.csv")
-x_train = pd.read_csv("data_train.csv")
-target = pd.read_csv("TARGET.csv")
-@app.route('/', methods=['GET'])
-def bienvenue():  # put application's code here
-    return 'Bienvenue à ma premiere API de ML!!!'
 
 @app.route('/predict/<ID>', methods=['GET'])
 def make_predict(ID):
