@@ -1,1 +1,1 @@
-	web: gunicorn api.app:app
+web: gunicorn --chdir scoring_model/api app:app
