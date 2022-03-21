@@ -1,7 +1,7 @@
 
 import pickle
 import pandas as pd
-from flask import Flask, request, render_template
+from flask import Flask
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -24,7 +24,7 @@ def make_predict(ID):
     proba = classifier.predict_proba(X)[:, 1][0]
     proba_json = {'probabilite': str(proba)}
     from flask import jsonify
-    return jsonify(proba_json)
+    return jsonify(str(proba))
 
 if __name__ == '__main__':
     app.run()
