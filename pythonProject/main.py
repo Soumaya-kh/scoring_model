@@ -14,11 +14,10 @@ import requests
 
 
 # importer les données
-x_test = pd.read_csv('data_test.csv')
+x_test = pd.read_csv('data_test_samle.csv')
 #échantionnage du dataframe en guise d'optimisation d'espace mémoire
 x_test = x_test.head(100)
-x_test_brute = pd.read_csv('data_test_unprocessed.csv')
-x_test_brute = x_test_brute.head(100)
+x_test_brute = pd.read_csv('test_sample_brute.csv')
 targets = pd.read_csv('TARGET.csv')
 
 def load_model() -> object:
