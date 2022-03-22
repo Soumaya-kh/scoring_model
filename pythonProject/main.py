@@ -22,7 +22,7 @@ targets = pd.read_csv('TARGET.csv')
 
 def load_model() -> object:
      '''importer le modèle'''
-     pickle_in = open('model/model.pickle', 'rb')
+     pickle_in = open('model.pickle', 'rb')
      clf = pickle.load(pickle_in)
      return clf
 
