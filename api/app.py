@@ -10,7 +10,7 @@ pickle_inp = open('model.pickle', "rb")
 classifier = pickle.load(pickle_inp)
 
 # importer les donnees test
-x_test = pd.read_csv("data_test.csv")
+x_test = pd.read_csv("data_test_samle.csv")
 
 @app.route('/predict/<ID>', methods=['GET'])
 def make_predict(ID):
