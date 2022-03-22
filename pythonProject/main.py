@@ -47,7 +47,7 @@ def load_age_population(data):
 
 
 def load_income_population(data):
-     data_revenu = data[data['AMT_INCOME_TOTAL']<200000]
+     data_revenu = data[data['AMT_INCOME_TOTAL']<350000]
      return data_revenu
 
 def load_children_population(data):
