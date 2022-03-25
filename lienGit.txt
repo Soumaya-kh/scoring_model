@@ -1,0 +1,3 @@
+Voici le lien vers mon Git Repository:
+
+https://github.com/Soumaya-kh/scoring_model
